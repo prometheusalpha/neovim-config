@@ -1,4 +1,4 @@
-# NVIM CONFIG
+# My personal Neovim config
 
 ## Requirements
 - [Neovim](https://github.com/neovim/neovim)

@@ -1,10 +1,11 @@
 local Plug = vim.fn['plug#']
 
 vim.call('plug#begin', '~/.config/nvim/plugged')
+  Plug('vim-airline/vim-airline')
+  Plug('vim-airline/vim-airline-themes')
   Plug('nvim-treesitter/nvim-treesitter', {['do'] = ':TSUpdate'})
   Plug('nvim-tree/nvim-web-devicons')
   Plug('nvim-tree/nvim-tree.lua')
-  Plug('akinsho/bufferline.nvim', { tag= 'v3.*' })
   Plug("ellisonleao/gruvbox.nvim")
   Plug('nvim-lua/popup.nvim')
   Plug('nvim-lua/plenary.nvim')

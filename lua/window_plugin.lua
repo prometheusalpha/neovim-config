@@ -1,4 +1,5 @@
 require("util")
+local gset = vim.api.nvim_set_var
 
 map("n","gn",":bnext<cr>")
 map("n","gp",":bprev<cr>")
@@ -21,7 +22,6 @@ require("nvim-tree").setup({
     group_empty = true
   }
 })
-require("bufferline").setup()
 require("leap").add_default_mappings()
 require("auto-save").setup()
 require("nvim-treesitter.configs").setup {
@@ -33,3 +33,12 @@ require("nvim-treesitter.configs").setup {
 require("project_nvim").setup {
 
 }
+
+gset('airline#extensions#tabline#enabled', 1)
+gset('airline#extensions#branch#enabled', 1)
+gset('airline#extensions#branch#displayed_head_limit', 10)
+gset('airline#extensions#tabline#left_sep', '|')
+gset('airline#extensions#tabline#left_alt_sep', '|')
+gset('airline#extensions#hunks#hunk_symbols', "['+', '~', '-']")
+gset('airline#extensions#tabline#formatter', 'unique_tail_improved')
+gset('airline_powerline_fonts', 1)

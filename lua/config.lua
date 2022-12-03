@@ -1,6 +1,5 @@
 local o = vim.o
 local wo = vim.wo
-local cmd = vim.cmd
 
 o.hlsearch = true
 o.incsearch = true
