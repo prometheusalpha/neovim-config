@@ -2,6 +2,7 @@ require("util")
 
 require("telescope").load_extension "file_browser"
 require("telescope").load_extension "projects"
+require("project_nvim").setup { }
 
 map("n","<Leader><Leader>",":Telescope find_files hidden=true <cr>")
 map("n","<Leader>e",":Telescope file_browser <cr>")

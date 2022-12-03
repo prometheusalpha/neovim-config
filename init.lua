@@ -6,9 +6,9 @@ require("term_plugin")
 require("window_plugin")
 require("prettier_plugin")
 require("comment_plugin")
-
-vim.o.background = "dark"
-vim.cmd([[colorscheme gruvbox]])
+require("editor_plugin")
+require("buffer_config")
+require("theme_config")
 
 vim.cmd('command! -nargs=0 RS :source $MYVIMRC')
 vim.cmd('command! -nargs=0 PI :PlugInstall')
