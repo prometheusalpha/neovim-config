@@ -1,26 +1,30 @@
 local Plug = vim.fn["plug#"]
 
 vim.call("plug#begin", "~/.config/nvim/plugged")
-Plug("vim-airline/vim-airline")
-Plug("vim-airline/vim-airline-themes")
+-- Editor
 Plug("nvim-treesitter/nvim-treesitter", { ["do"] = ":TSUpdate" })
 Plug("nvim-tree/nvim-web-devicons")
+Plug("akinsho/bufferline.nvim", { ["tag"] = "v3.*" })
 Plug("nvim-tree/nvim-tree.lua")
-Plug("ellisonleao/gruvbox.nvim")
 Plug("nvim-lua/popup.nvim")
 Plug("nvim-lua/plenary.nvim")
+Plug("Pocco81/auto-save.nvim")
+Plug("voldikss/vim-floaterm")
+-- Theme
+Plug 'olivercederborg/poimandres.nvim'
+-- Telescope
 Plug("BurntSushi/ripgrep")
 Plug("nvim-telescope/telescope.nvim", { tag = "0.1.0" })
 Plug("nvim-telescope/telescope-file-browser.nvim")
-Plug("neoclide/coc.nvim", { branch = "release" })
-Plug("tpope/vim-repeat")
-Plug("ggandor/leap.nvim")
-Plug("Pocco81/auto-save.nvim")
 Plug("ahmedkhalf/project.nvim")
-Plug("voldikss/vim-floaterm")
+-- Language
+Plug("neoclide/coc.nvim", { branch = "release" })
 Plug("terrortylor/nvim-comment")
-Plug("mhinz/vim-signify")
 Plug("google/vim-maktaba")
 Plug("google/vim-codefmt")
 Plug("google/vim-glaive")
+-- Navigate
+Plug("ggandor/leap.nvim")
+-- Git
+Plug("mhinz/vim-signify")
 vim.call("plug#end")

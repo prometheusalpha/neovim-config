@@ -10,5 +10,5 @@ require("editor_plugin")
 require("buffer_config")
 require("theme_config")
 
-vim.cmd('command! -nargs=0 RS :source $MYVIMRC')
-vim.cmd('command! -nargs=0 PI :PlugInstall')
+vim.cmd("command! -nargs=0 RS :source /home/prometheus/.config/nvim/init.lua")
+vim.cmd("command! -nargs=0 PI PlugInstall")

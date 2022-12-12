@@ -9,7 +9,7 @@ vim.opt.relativenumber = true
 vim.opt.clipboard = "unnamedplus"
 o.cursorline = true
 o.expandtab = true
-o.termguicolors = true
+vim.opt.termguicolors = true
 o.shiftwidth = 2
 o.shell = "/usr/bin/zsh"
 

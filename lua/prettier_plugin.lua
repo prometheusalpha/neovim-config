@@ -5,7 +5,7 @@ map("n", "<Leader>f", "<CMD> lua _G.format() <cr>")
 
 vim.call("glaive#Install")
 vim.cmd(
-	'Glaive codefmt google_java_executable="java -jar /home/prometheus/.config/nvim/google-java-format-1.15.0-all-deps.jar"'
+	'Glaive codefmt google_java_executable="java -jar /home/prometheus/.config/nvim/java-format.jar"'
 )
 vim.cmd('Glaive codefmt luaformatterfiveone_executable="stylua"')
 
