@@ -5,26 +5,38 @@ vim.call("plug#begin", "~/.config/nvim/plugged")
 Plug("nvim-treesitter/nvim-treesitter", { ["do"] = ":TSUpdate" })
 Plug("nvim-tree/nvim-web-devicons")
 Plug("akinsho/bufferline.nvim", { ["tag"] = "v3.*" })
+Plug("nvim-lualine/lualine.nvim")
 Plug("nvim-tree/nvim-tree.lua")
-Plug("nvim-lua/popup.nvim")
-Plug("nvim-lua/plenary.nvim")
 Plug("Pocco81/auto-save.nvim")
-Plug("voldikss/vim-floaterm")
+Plug("lukas-reineke/indent-blankline.nvim")
+Plug("goolord/alpha-nvim")
 -- Theme
-Plug 'olivercederborg/poimandres.nvim'
+Plug('folke/tokyonight.nvim', { branch = 'main' })
 -- Telescope
 Plug("BurntSushi/ripgrep")
+Plug("nvim-lua/plenary.nvim")
 Plug("nvim-telescope/telescope.nvim", { tag = "0.1.0" })
-Plug("nvim-telescope/telescope-file-browser.nvim")
 Plug("ahmedkhalf/project.nvim")
 -- Language
-Plug("neoclide/coc.nvim", { branch = "release" })
 Plug("terrortylor/nvim-comment")
-Plug("google/vim-maktaba")
-Plug("google/vim-codefmt")
-Plug("google/vim-glaive")
+Plug("uiiaoo/java-syntax.vim")
 -- Navigate
 Plug("ggandor/leap.nvim")
 -- Git
-Plug("mhinz/vim-signify")
+Plug("lewis6991/gitsigns.nvim")
+-- LSP Support
+Plug 'neovim/nvim-lspconfig'
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
+-- Autocompletion
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'saadparwaiz1/cmp_luasnip'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-nvim-lua'
+--  Snippets
+Plug 'L3MON4D3/LuaSnip'
+Plug 'rafamadriz/friendly-snippets'
+Plug 'VonHeikemen/lsp-zero.nvim'
 vim.call("plug#end")

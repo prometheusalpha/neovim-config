@@ -1,18 +1,36 @@
-function _G.map(mode, lhs, rhs, opts)
-    local options = {silent = true, noremap = true}
-    if opts then
-        options = vim.tbl_extend("force", options, opts)
-    end
-    vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+local M = {}
+
+local function map(mode, lhs, rhs, opts)
+  local options = { silent = true }
+  if opts then
+    options = vim.tbl_extend("force", options, opts)
+  end
+  vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
-function _G.show_docs()
-    local cw = vim.fn.expand('<cword>')
-    if vim.fn.index({'vim', 'help'}, vim.bo.filetype) >= 0 then
-        vim.api.nvim_command('h ' .. cw)
-    elseif vim.api.nvim_eval('coc#rpc#ready()') then
-        vim.fn.CocActionAsync('doHover')
-    else
-        vim.api.nvim_command('!' .. vim.o.keywordprg .. ' ' .. cw)
-    end
+function M.source()
+  vim.cmd("source ~/.config/nvim/init.lua")
+
+  local paths = vim.split(vim.fn.glob("~/.config/nvim/lua/*/*.lua"), "\n")
+
+  for _, file in pairs(paths) do
+    vim.cmd("source " .. file)
+  end
 end
+
+function M.mapAll(keymaps)
+  for mode, keymap in pairs(keymaps) do
+    if mode == "x" then
+      for key, expanded in pairs(keymap) do
+        map("n", key, expanded)
+        map("v", key, expanded)
+      end
+    else
+      for key, expanded in pairs(keymap) do
+        map(mode, key, expanded)
+      end
+    end
+  end
+end
+
+return M
