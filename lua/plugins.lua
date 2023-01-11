@@ -4,14 +4,15 @@ vim.call("plug#begin", "~/.config/nvim/plugged")
 -- Editor
 Plug("nvim-treesitter/nvim-treesitter", { ["do"] = ":TSUpdate" })
 Plug("nvim-tree/nvim-web-devicons")
-Plug("akinsho/bufferline.nvim", { ["tag"] = "v3.*" })
+Plug("akinsho/bufferline.nvim", { tag = "v3.*" })
 Plug("nvim-lualine/lualine.nvim")
 Plug("nvim-tree/nvim-tree.lua")
 Plug("Pocco81/auto-save.nvim")
 Plug("lukas-reineke/indent-blankline.nvim")
 Plug("goolord/alpha-nvim")
+Plug("github/copilot.vim")
 -- Theme
-Plug('folke/tokyonight.nvim', { branch = 'main' })
+Plug("sainnhe/everforest")
 -- Telescope
 Plug("BurntSushi/ripgrep")
 Plug("nvim-lua/plenary.nvim")
@@ -22,6 +23,7 @@ Plug("terrortylor/nvim-comment")
 Plug("uiiaoo/java-syntax.vim")
 -- Navigate
 Plug("ggandor/leap.nvim")
+Plug("gcmt/wildfire.vim")
 -- Git
 Plug("lewis6991/gitsigns.nvim")
 -- LSP Support

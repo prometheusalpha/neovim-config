@@ -13,7 +13,7 @@ dashboard.section.header.val = {
 
 -- Set menu
 dashboard.section.buttons.val = {
-  dashboard.button("r", "  > Projects", ":Telescope projects<CR>"),
+  dashboard.button("p", "  > Projects", ":Telescope projects<CR>"),
   dashboard.button("s", "  > Settings", ":e $MYVIMRC | :cd %:p:h | split . | wincmd k <CR>"),
   dashboard.button("q", "  > Quit NVIM", ":qa<CR>"),
 }

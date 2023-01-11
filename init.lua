@@ -4,7 +4,7 @@ require("config")
 require("keymap")
 -- Plugins
 require("theme")
-require("layout_config")
+require("layout")
 require("telescopes")
 require("editor")
 require("comment")

@@ -1,8 +1,11 @@
 local util = require("util")
+
 local keymaps = {
+  -- for both insert and normal mode
   ["x"] = {
     ["0"] = "^",
     ["."] = "$",
+    [","] = ".",
     ["<Space>"] = "zz",
     ["="] = "}",
     ["-"] = "{",
@@ -17,7 +20,7 @@ local keymaps = {
     ["gn"] = ":bnext<cr>",
     ["gp"] = ":bprev<cr>",
     ["co"] = ':%bdelete!|edit #|bd#|normal`"|NvimTreeFocus<cr>',
-    ["cc"] = ":bd<cr>",
+    ["cc"] = ":bd|bnext<cr>",
 
     -- LSP
     ["<Leader>f"] = "<CMD>silent exec \"LspZeroFormat\"<cr>",
@@ -37,7 +40,7 @@ local keymaps = {
   },
   ["v"] = {
     ["\""] = "c\"\"<Esc>hp",
-  }
+  },
 }
 
 util.mapAll(keymaps)

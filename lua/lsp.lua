@@ -6,9 +6,14 @@ lsp.ensure_installed({
   'tsserver',
   'eslint',
   'sumneko_lua',
+  'jdtls',
 })
 lsp.nvim_workspace()
+
+-- custom lsp options
 lsp.setup_servers({ 'jdtls', opts = require("lsp.java").config })
+
+-- Config
 lsp.set_preferences({
   suggest_lsp_servers = true,
   setup_servers_on_start = true,

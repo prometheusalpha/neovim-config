@@ -20,13 +20,11 @@ end
 
 function M.mapAll(keymaps)
   for mode, keymap in pairs(keymaps) do
-    if mode == "x" then
-      for key, expanded in pairs(keymap) do
+    for key, expanded in pairs(keymap) do
+      if mode == "x" then
         map("n", key, expanded)
         map("v", key, expanded)
-      end
-    else
-      for key, expanded in pairs(keymap) do
+      else
         map(mode, key, expanded)
       end
     end
