@@ -1,10 +1,10 @@
 local on_attach = require("plugins.configs.lspconfig").on_attach
 local capabilities = require("plugins.configs.lspconfig").capabilities
-
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 local lspconfig = require "lspconfig"
 
 -- if you just want default config for the servers then put them in a table
-local servers = { "html", "cssls", "tsserver", "clangd", "svelte" }
+local servers = { "html", "cssls", "tsserver", "clangd", "pyright", "volar" }
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
@@ -18,6 +18,19 @@ lspconfig.jdtls.setup {
   settings = require("custom.configs.java").config.settings,
   on_attach = on_attach,
   capabilities = capabilities,
+}
+
+lspconfig.tsserver.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = {
+    "javascript",
+    "javascriptreact",
+    "typescriptreact",
+    "typescript",
+    "vue",
+    "svelte"
+  }
 }
 
 lspconfig.emmet_ls.setup {
@@ -41,7 +54,7 @@ lspconfig.emmet_ls.setup {
     html = {
       options = {
         -- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
-        ["bem.enabled"] = true,
+        ["jsx.enabled"] = true,
       },
     },
   },

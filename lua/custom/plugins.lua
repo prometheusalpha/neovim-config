@@ -114,6 +114,10 @@ local plugins = {
 
   -- Install a plugin
   {
+    "mfussenegger/nvim-jdtls",
+    ft = { "java" },
+  },
+  {
     "max397574/better-escape.nvim",
     event = "InsertEnter",
     config = function()

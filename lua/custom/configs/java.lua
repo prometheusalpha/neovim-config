@@ -7,11 +7,12 @@ local jdtls_dir = vim.fn.stdpath('data') .. '/mason/packages/jdtls'
 local path_to_lsp_config = jdtls_dir .. "/config_linux"
 local lombok_path = jdtls_dir .. "/lombok.jar"
 local path_to_plugins = jdtls_dir .. "/plugins/"
-local path_to_jar = path_to_plugins .. "org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar"
+local path_to_jar = path_to_plugins .. "org.eclipse.equinox.launcher_1.6.500.v20230622-2056.jar"
+-- local path_to_jar = path_to_plugins .. "org.eclipse.equinox.launcher_".."*.jar"
 
 M.config = {
   cmd = {
-    'java',
+    '/usr/bin/java',
     '-Declipse.application=org.eclipse.jdt.ls.core.id1',
     '-Dosgi.bundles.defaultStartLevel=4',
     '-Declipse.product=org.eclipse.jdt.ls.core.product',
