@@ -28,7 +28,6 @@ lspconfig.tsserver.setup{
     "javascriptreact",
     "typescriptreact",
     "typescript",
-    "vue",
     "svelte"
   }
 }
